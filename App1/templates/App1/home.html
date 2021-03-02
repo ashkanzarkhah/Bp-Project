@@ -13,7 +13,7 @@
     <p>Welcome</p>
     {% for x in test%}
         <h2>
-        <a href="#">{{ x.title }}</a>
+        <a href="{% url 'App1:detail' slug=x.slug %}">{{ x.title }}</a>
         <p>{{ x.shortener }}</p>
         <p>{{ x.date }}</p>
         </h2>
