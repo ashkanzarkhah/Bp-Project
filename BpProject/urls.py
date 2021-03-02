@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from . import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('polls/', include('polls.urls')),
@@ -24,3 +25,5 @@ urlpatterns = [
     path('', views.home),
     path('App1/', include('App1.urls')),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
