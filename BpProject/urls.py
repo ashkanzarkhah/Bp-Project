@@ -24,6 +24,7 @@ urlpatterns = [
     path('about/', views.about),
     path('', views.home),
     path('App1/', include('App1.urls')),
+    path('Users/', include('Users.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

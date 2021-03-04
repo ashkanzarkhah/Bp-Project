@@ -7,4 +7,5 @@ def home(request):
     return render(request, 'App1/home.html',{'test': test})
 
 def app_detail(request, slug):
-    return HttpResponse(slug)
+    App = models.Apps1.objects.get(slug=slug)
+    return render(request, 'App1/home.html', {'test': [App]})
