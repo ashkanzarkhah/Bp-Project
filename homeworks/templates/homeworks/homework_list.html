@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>movies</h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Download</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for homework in homeworks %}
+            <tr>
+                <td>{{ homework.title }}</td>
+                <td>{{ homework.date }}</td>
+                <td>
+                    <a href="{{ homework.homework_file.url }}" class="btn btn-primary btn-sm">
+                        Download homework
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
