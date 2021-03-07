@@ -2,10 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Homework list</title>
 </head>
 <body>
-    <h2>movies</h2>
+    <nav>
+        <ul>
+            <li>
+                <form class="logout-link" action="{% url 'masteraccounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">logout !</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <h2>homeworks</h2>
     <table class="table">
         <thead>
         <tr>

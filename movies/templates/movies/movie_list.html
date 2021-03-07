@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>movie list</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li>
+                <form class="logout-link" action="{% url 'masteraccounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">logout !</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
     <h2>movies</h2>
     <table class="table">
         <thead>

@@ -5,9 +5,19 @@
     <title>student login</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li>
+                <form class="logout-link" action="{% url 'masteraccounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">logout !</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
     <h1> Student Login </h1>
     <a href="/masteraccounts/login">masters login and signup</a>
-    <form class="site-form" action="/studentaccounts/login" method = "post">
+    <form class="site-form" action="/studentaccounts/login/" method = "post">
         {{ form }}
         {% csrf_token %}
         <input type="submit" value="login !">

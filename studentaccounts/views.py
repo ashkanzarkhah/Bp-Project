@@ -12,8 +12,12 @@ def sign_up(request):
             return redirect('studentaccounts:main')
     else: form = UserCreationForm()
     return render(request, 'studentaccounts/signup.html', {'form' : form})
+
 def main(request):
-    return render(request, 'studentaccounts/main.html')
+    if request.user.is_authenticated:
+        return render(request, 'studentaccounts/main.html')
+    return redirect('studentaccounts:login')
+
 def log_in(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)

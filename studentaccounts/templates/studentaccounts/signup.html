@@ -5,8 +5,18 @@
     <title>Students Signup</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li>
+                <form class="logout-link" action="{% url 'masteraccounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">logout !</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
     <h1>Students Signup</h1>
-    <form class="site-form" action = "/studentaccounts/signup" method="post">
+    <form class="site-form" action = "/studentaccounts/signup/" method="post">
         {{ form }}
         {% csrf_token %}
         <input type="submit" value="Signup !">

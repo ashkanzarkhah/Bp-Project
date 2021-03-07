@@ -5,8 +5,18 @@
     <title>master Signup</title>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li>
+                <form class="logout-link" action="{% url 'masteraccounts:logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">logout !</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
     <h1>Masters Signup</h1>
-    <form class="site-form" action = "/masteraccounts/signup" method="post">
+    <form class="site-form" action = "/masteraccounts/signup/" method="post">
         {{ form }}
         {% csrf_token %}
         <input type="submit" value="Signup !">
