@@ -4,7 +4,7 @@ from .models import Movie
 
 # Create your views here.
 def movie_list(request):
-    movies = Movie.objects.all()
+    movies = Movie.objects.all().order_by('date')
     return render(request, 'movies/movie_list.html', {'movies' : movies})
 def upload_movie(request):
     if request.method == 'POST':

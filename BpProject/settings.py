@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'masteraccounts',
     'studentaccounts',
     'movies',
+    'homeworks',
 ]
 
 MIDDLEWARE = [

@@ -10,7 +10,7 @@
         <thead>
         <tr>
             <th>Title</th>
-            <th>Author</th>
+            <th>Date</th>
             <th>Download</th>
         </tr>
         </thead>
@@ -18,7 +18,7 @@
             {% for movie in movies %}
             <tr>
                 <td>{{ movie.title }}</td>
-                <td>{{ movie.author }}</td>
+                <td>{{ movie.date }}</td>
                 <td>
                     <a href="{{ movie.movie_file.url }}" class="btn btn-primary btn-sm">
                         Download movie
