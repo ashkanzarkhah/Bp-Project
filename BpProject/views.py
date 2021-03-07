@@ -3,4 +3,4 @@ from django.shortcuts import HttpResponse
 
 
 def home(request):
-    return redirect('masteraccounts:signup')
+    return redirect('masteraccounts:login')
