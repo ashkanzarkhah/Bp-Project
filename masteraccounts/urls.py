@@ -1,10 +1,11 @@
 from django.urls import include, path
 from . import views
+from .views import sign_upView, mainView, log_inView, log_outView
 
 app_name = 'masteraccounts'
 urlpatterns = [
-    path('signup/', views.sign_up, name = 'signup'),
-    path('main/', views.main, name = 'main'),
-    path('login/', views.log_in, name = 'login'),
-    path('logout/', views.log_out, name = 'logout'),
+    path('signup/', sign_upView.as_view(), name = 'signup'),
+    path('main/', mainView.as_view(), name = 'main'),
+    path('login/', log_inView.as_view(), name = 'login'),
+    path('logout/', log_outView.as_view(), name = 'logout'),
 ]

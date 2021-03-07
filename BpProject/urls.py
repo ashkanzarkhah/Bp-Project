@@ -19,10 +19,11 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from django.conf.urls.static import static
+from .views import homeView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home),
+    path('', homeView.as_view()),
     path('masteraccounts/', include('masteraccounts.urls')),
     path('studentaccounts/', include('studentaccounts.urls')),
     path('movies/', include('movies.urls')),
