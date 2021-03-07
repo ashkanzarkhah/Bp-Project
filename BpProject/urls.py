@@ -19,12 +19,8 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
-    path('about/', views.about),
     path('', views.home),
-    path('App1/', include('App1.urls')),
-    path('Users/', include('Users.urls')),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
