@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>login</title>
+    <title>master login</title>
 </head>
 <body>
-    <a href="/masteraccounts/signup">sign up</a>
+    <h1> Master Login </h1>
+    <a href="/studentaccounts/login">students login and signup</a>
     <form class="site-form" action="/masteraccounts/login" method = "post">
         {{ form }}
         {% csrf_token %}
-        <input type="submit" value="submit!">
+        <input type="submit" value="login !">
     </form>
+    <a href="/masteraccounts/signup">sign up</a>
 
 </body>
 </html>
