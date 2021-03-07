@@ -1,0 +1,8 @@
+from django.urls import include, path
+from . import views
+
+app_name = 'masteraccounts'
+urlpatterns = [
+    path('signup', views.sign_up, name = 'signup'),
+    path('main', views.main, name = 'main'),
+]

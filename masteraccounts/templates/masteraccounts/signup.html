@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Master Sign Up</title>
+</head>
+<body>
+    <h1>Master Sign Up</h1>
+    <form class="site-form" action = "/masteraccounts/signup" method="post">
+        {{ form }}
+        {% csrf_token %}
+        <input type="submit" value="subumit">
+    </form>
+</body>
+</html>
