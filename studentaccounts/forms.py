@@ -8,14 +8,16 @@ from django.forms import ValidationError
 
 class UserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True, label='Email')
+    studentnumber = forms.IntegerField(required=True, label='StudentNumber')
 
     class Meta:
         model = User
-        fields = ("username", "email", "password1", "password2")
+        fields = ("username", "email","studentnumber", "password1", "password2")
 
     def save(self, commit=True):
         user = super(UserCreationForm, self).save(commit=False)
         user.email = self.cleaned_data["email"]
+        user.studentnumber = self.cleaned_data["studentnumber"]
         if commit:
             user.save()
         return user
